@@ -1,0 +1,2 @@
+Program nou pentru AAT-SWR-PWR meter
+inglobeaza functii noi de afisare bargraf si valoarea puterii RF

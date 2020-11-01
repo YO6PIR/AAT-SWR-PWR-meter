@@ -1,0 +1,92 @@
+/*  Rutina de setari pentru Power-Meter
+    Setarea tensiunii de referinta a procesorului- Vref[5000]mV masurata pe pin <21>
+    Setarea factorului de divizare la puterea masurata de 1W
+    Setarea factorului de divizare la puterea de 10W
+*/
+void (setup)void
+{
+    lcd_clear();       //sterge lcd-ul
+    //Readeeprom Uref , DTA2                                   'citeste val Uref din memorie
+    unsigned int Vref=0;
+    if ( Vref > 5000 )
+        {
+        Uref = 5000;                         //'Valoare initiala Uref=5000mV
+        }
+  //Home U : LCD "Release button! "
+  lcd_gotoxy(0,0);//LCD Home U
+  //Bitwait Buton , set
+  while (BUTON_TUNE);
+  Ureflbl1:
+
+     Incr T
+  If T = 5 then toggle UpDwn                                'Daca trec 5 secunde schimba sensul
+
+   If T > 10 Then Goto Urefend
+  Home U : Lcd " Uref ="
+  #if Ver_LCD = 1
+   Home L :
+  #endif
+  Lcd Uref ; "mV  "
+  Waitms 200                                                'asteapta relaxarea butonului
+
+  If Buton = 0 Then
+    If UpDwn = 1 then
+      Incr Uref : LCD Chr(0)
+    else
+      Decr Uref : LCD Chr(1)
+    endif
+    T = 0
+    If Uref > 2700 Then Uref = 2500
+  End If
+
+  Goto Ureflbl1
+Urefend:
+
+  Writeeeprom Uref , Dta2                                   'salveaza noU_alim valoare
+   Gosub sunet
+  '--------------------------
+ADC_1w_LBL:
+
+  Samples                                                   'citeste valorile pe intrarile ADC
+
+  Home U : Lcd " 1W level="
+  #if Ver_LCD = 1
+   Home L :
+  #endif
+  Lcd ADC2 ; spc(6)
+  Home L : Lcd "Press Button OK "
+  Waitms 200                                                'asteapta relaxarea butonului
+
+  If Buton = 0 Then goto ADC_1W_end
+  Goto ADC_1w_LBL
+
+ADC_1w_end:
+  Writeeeprom ADC2 , Dta14
+  Gosub sunet
+  '--------------------------
+ADC_10w_LBL:
+
+  Samples                                                   'citeste valorile pe intrarile ADC
+  Home U : Lcd "10W level="                                 ' Meniu10(3)
+  #if Ver_LCD = 1
+   Home L :
+  #endif
+  Lcd ADC2 ; spc(6)
+  Home L : Lcd Meniu16(2)
+  Waitms 200                                                'asteapta relaxarea butonului
+  If Buton = 0 Then goto ADC_10W_end
+  Goto ADC_10w_LBL
+ADC_10w_end:
+  Writeeeprom ADC2 , Dta15
+  Gosub Sunet
+  goto Re_init
+
+sunet:
+Call Beep!
+  Home L : Lcd "   ...Saved!    "
+  Waitms 1500
+  T = 0
+  Cls
+return
+
+}

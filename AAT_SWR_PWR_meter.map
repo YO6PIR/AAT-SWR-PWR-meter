@@ -1,0 +1,83 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+Volt_masurat                                                                      0x0160       4
+Step_size                                                                         0x0164       4
+SW                                                                                0x0168       4
+U_1W                                                                              0x016C       4
+U_10W                                                                             0x0170       4
+dBm_zec                                                                           0x0174       4
+S10W                                                                              0x0178       4
+Vfwd                                                                              0x017C       4
+Vrew                                                                              0x0180       4
+swr                                                                               0x0184       4
+sweep_relay                                                                       0x0188       2
+send                                                                              0x018A       2
+_base_y                                                                           0x018C       4
+_lcd_x                                                                            0x0190       1
+_lcd_y                                                                            0x0191       1
+_lcd_maxx                                                                         0x0192       1
+_seed                                                                             0x0193       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+ADC_1W                                                                            0x0000       2
+ADC_10W                                                                           0x0002       2
+Uref                                                                              0x0004       2
+S10W_cal                                                                          0x0006       4
+Step_size_cal                                                                     0x000A       4
+DELAY_BEFORE_ADC                                                                  0x000E       1
+Band_selector                                                                     0x000F       2
+Ind_min                                                                           0x0011      22
+Cap_min                                                                           0x0027      22
+k1_min                                                                            0x003D      22
+swr_min                                                                           0x0053      44
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+RF_power                                                                          R4,R5        2
+Pwr                                                                               R6,R7        2
+Pwr_old                                                                           R8,R9        2
+C                                                                                 R10,R11      2
+L                                                                                 R12,R13      2
+sar                                                                               R2.0      1bit
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+Tensiune                                                                          0x0012E     30
+Cal_power                                                                         0x0014C     88
+Putere                                                                            0x001A4     75
+define_char                                                                       0x001EF     26
+Send_LC                                                                           0x00209     55
+Samples                                                                           0x00240     97
+bargraf                                                                           0x002A1    134
+swr_out                                                                           0x00327     37
+Formateaza                                                                        0x0034C     32
+l_out                                                                             0x0036C     23
+c_out                                                                             0x00383     23
+tunner                                                                            0x0039A     34
+band_out                                                                          0x003BC     94
+setari                                                                            0x0041A    110
+main                                                                              0x00488    497
+ftrunc                                                                            0x00679     48
+floor                                                                             0x006A9     12
+log                                                                               0x006B5    101
+exp                                                                               0x0071A    111
+pow                                                                               0x00789     48
+_lcd_delay_G101                                                                   0x007B9      4
+_lcd_ready                                                                        0x007BD     17
+_lcd_write_nibble_G101                                                            0x007CE      8
+_lcd_write_data                                                                   0x007D6     14
+lcd_write_byte                                                                    0x007E4      9
+_lcd_read_nibble_G101                                                             0x007ED      7
+lcd_read_byte0_G101                                                               0x007F4      8
+lcd_gotoxy                                                                        0x007FC     18
+lcd_clear                                                                         0x0080E     15
+lcd_putchar                                                                       0x0081D     36
+lcd_putsf                                                                         0x00841     18
+_long_delay_G101                                                                  0x00853      5
+_lcd_init_write_G101                                                              0x00858     11
+lcd_init                                                                          0x00863     45
