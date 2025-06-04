@@ -6,6 +6,8 @@ Noul cuplor de antena inglobeaza si un circuit amplificator logaritmic cu AD8307
 
 Meniul noului aparat
 Meniul principal Automatik-Antenna-Tunner
+![image](https://github.com/user-attachments/assets/e70cc3d3-6e25-4f7e-939d-7661f6c37af3)
+
 
 L/C - Valorile bobina /condensator introduse
 B:3,70 - Banda de frecventa selectata
