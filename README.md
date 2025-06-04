@@ -13,18 +13,28 @@ L/C - Valorile bobina /condensator introduse
 B:3,70 - Banda de frecventa selectata
 Bargraf FWD/REW si VSWR	
 Meniul MANUAL
+![image](https://github.com/user-attachments/assets/378b0c5f-1a88-4234-b358-93d9bfc28f79)
+
 
 Meniu accesat cu butonul [MAN]; permite rglajul manual al valorilor L/C	
 Meniul SWR-PWR meter
+![image](https://github.com/user-attachments/assets/fad7921e-b894-4b09-b749-cd7a64296832)
+
 
 Meniu accesat cu butonul [- C]; Functie preluata de la vechiul SWR Ver.11	
 Meniul DIR/REF analogic
+![image](https://github.com/user-attachments/assets/951a8b4a-fb77-4b55-bca6-9b979df6a8e0)
+
 
 Meniu accesat cu butonul [+ C]; In acest meniu se vizualizeaza valorile Dir/Ref analogice si bargraf	
 Meniul TUNNER OFF
+![image](https://github.com/user-attachments/assets/cfa7bbaf-2ea9-43cf-97f9-2d0e59ab74f9)
+
 
 Meniu accesat cu butonul [+ L]; In acest meniu se vizualizeaza bargraful si valoarea VSWR cu tunnerul decuplat din circuitul antenei	
 Meniul Delay Time Relay
+![image](https://github.com/user-attachments/assets/344ec571-191d-441d-a1e3-d59c5d507c69)
+
 
 Meniu accesat cu butonul [- L]; In acest meniu se ajusteaza timpul de aclansare a releelor in modul automatik; Tastele [Band_UP]/[Band_DOWN]	
 Calibrarea aparatului
