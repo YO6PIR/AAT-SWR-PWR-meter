@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/f122ad1a-02cd-4009-be24-a61a8453f56f)
+
+<img width="3263" height="1552" alt="P1140324" src="https://github.com/user-attachments/assets/9f0b663d-04a0-4a60-bdcb-180295d30a11" />
 
 Please refer to: https://www.qsl.net/yo6pir/aat.html
 Automatik Antenna Tunner with SWR-Power meter
